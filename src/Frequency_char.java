@@ -10,5 +10,6 @@ public class Frequency_char {
                 System.out.println((char)i+" = "+arr[i]);
             }
         }
+
     }
 }
