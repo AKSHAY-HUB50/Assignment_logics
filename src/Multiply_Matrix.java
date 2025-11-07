@@ -8,9 +8,11 @@ public class Multiply_Matrix {
                 {3,4}};
         int[][] arr3=new int[2][2];
 
-        for (int i = 0; i < arr3.length; i++) {
-            for (int j = 0; j < arr3[i].length; j++) {
-                arr3[i][j]=arr1[i][j]*arr2[i][j];
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr2.length; j++) {
+                for (int k = 0; k < arr1[i].length; k++) {
+                    arr3[i][j] =arr3[i][j]+arr1[i][k] * arr2[k][j];
+                }
             }
         }
         for (int[] a :arr3) {
