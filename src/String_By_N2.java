@@ -1,17 +1,27 @@
 public class String_By_N2 {
     public static void main(String[] args) {
         String str = "abcDEFPQR9";
-        int parts=7;
+        int parts=4;
 
         int len=str.length();
         int partSize=len/parts;
-        int start=0,end=partSize;
+        int remainder = len % parts;
 
-        for (int i = 0; i < parts-1; i++) {
-            System.out.println(str.substring(start,end));;
-            start=end;
-            end+=partSize;
+
+        int index = 0;
+        for (int i = 0; i < parts; i++) {
+            int end = index + partSize;
+
+            if (remainder > 0) {
+                end++;
+                remainder--;
+            }
+
+            if (end > len) end = len;
+
+            System.out.println(str.substring(index, end));
+            index = end;
         }
-        System.out.println(str.substring(start));
+
     }
 }
