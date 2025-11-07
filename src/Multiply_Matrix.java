@@ -16,7 +16,7 @@ public class Multiply_Matrix {
             }
         }
         for (int[] a :arr3) {
-            System.out.println(Arrays.toString(a));
+            System.out.println(Arrays.toString(a)); //System.out.println(Arrays.deepToString(arr3));
         }
     }
 }
